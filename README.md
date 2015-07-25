@@ -2,6 +2,12 @@
 
 This gem is based on [Mathieu Ripert](https://github.com/mathieuripert)'s work, [ruby-tf-idf](https://github.com/mathieuripert/ruby-tf-idf). Some changes are made in the gem, aside from the project structure.
 
+## Installation
+
+```
+$ gem install frekwenza
+```
+
 ## Usage
 
 Mostly similar with ruby-tf-idf, here's an example right from ruby-tf-idf's readme only with the "RubyTfIdf" part replaced with "Frekwenza".
