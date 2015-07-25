@@ -6,8 +6,8 @@ require 'frekwenza/version'
 Gem::Specification.new do |gem|
   gem.name          = "frekwenza"
   gem.version       = Frekwenza::VERSION
-  gem.authors       = ["Edwin Tunggawan"]
-  gem.email         = ["vcc.edwint@gmail.com"]
+  gem.authors       = ["Mathieu Ripert", "Edwin Tunggawan"]
+  gem.email         = ["mathieu.ripert@gmail.com", "vcc.edwint@gmail.com"]
   gem.description   = %q{Term Frequency - Inverse Document Frequency }
   gem.summary       = %q{Calculating TF-IDF, based on Mathieu Ripert's ruby-tf-idf gem}
   gem.homepage      = "https://github.com/sdsdkkk/frekwenza"
