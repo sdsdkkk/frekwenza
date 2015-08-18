@@ -2,14 +2,14 @@ module Frekwenza
   class TfIdf
     attr_reader :tf, :idf, :tf_idf
 
-    def initialize(docs, limit, stop_words_file=nil)
+    def initialize(docs, limit, stop_words=nil)
       @docs = split_docs(docs)
       @tf = []
       @idf = {}
       @tf_idf = []
       @docs_size = @docs.size
       calculate_tf_and_idf
-      calculate_tf_idf(limit, stop_words_file)
+      calculate_tf_idf(limit, stop_words)
     end
 
     private
@@ -38,14 +38,14 @@ module Frekwenza
       end
     end
 
-    def calculate_tf_idf(limit, stop_words_file)
+    def calculate_tf_idf(limit, stop_words)
       @tf.each do |tf_freq|
         tfidf = Hash.new(0)
         tf_freq.each do |k, v|
           tfidf[k] = @idf[k] * v
         end
-        if stop_words_file
-          sw = StopWords.new(stop_words_file)
+        if stop_words
+          sw = StopWords.new(stop_words)
           tfidf.reject!{|k| sw.stop_words.include?(k)}
         end
         tfidf = Hash[tfidf.sort_by{|k, v| -v}[0..limit-1]]

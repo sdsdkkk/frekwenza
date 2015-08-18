@@ -2,9 +2,13 @@ module Frekwenza
   class StopWords
     attr_reader :stop_words
 
-    def initialize(file)
-      string = read(file)
-      build_list(string)
+    def initialize(sw)
+      if sw.kind_of?(String)
+        string = read(sw)
+        build_list(string)
+      else
+        @stop_words = sw
+      end
     end
 
     private

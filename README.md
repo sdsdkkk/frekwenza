@@ -44,10 +44,12 @@ corpus = [
   'A cynic smells flowers and looks for the casket.'
 ]
 
-limit = 3 #restrict to the top 3 relevant words per document
+limit = 3 # restrict to the top 3 relevant words per document
 stop_words = "stop_words.txt"
 
 t = Frekwenza::TfIdf.new corpus, limit, stop_words
+# or you can pass array of strings for the stop words parameter
+# t = Frekwenza::TfIdf.new corpus, limit, ["some", "stop", "words"]
 t.tf_idf
 ```
 
