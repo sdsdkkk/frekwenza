@@ -83,5 +83,5 @@ The following is an example output of Frekwenza.
 
 ## Authors
 
-- [Mathieu Ripert](https://github.com/mathieuripert), author of [ruby-tf-idf](https://github.com/mathieuripert/ruby-tf-idf) gem.
-- [Edwin Tunggawan](htps://github.com/sdsdkkk)
+- [Mathieu Ripert](https://github.com/mathieuripert), author of [ruby-tf-idf](https://github.com/mathieuripert/ruby-tf-idf) gem
+- [Edwin Tunggawan](https://github.com/sdsdkkk)
